@@ -25,6 +25,7 @@ use Symfony\Component\DependencyInjection\Reference;
  * Archetype extension.
  *
  * @author Adam Elsodaney <adam.elso@gmail.com>
+ * @author Cyril Chapellier <tchap@tchap.me>
  */
 class SyliusArchetypeExtension extends AbstractResourceExtension
 {

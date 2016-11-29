@@ -35,6 +35,7 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
  * sections are normalized, and merged.
  *
  * @author Adam Elsodaney <adam.elso@gmail.com>
+ * @author Cyril Chapellier <tchap@tchap.me>
  */
 class Configuration implements ConfigurationInterface
 {
