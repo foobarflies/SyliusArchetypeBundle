@@ -57,4 +57,12 @@ class ArchetypeTranslationType extends AbstractResourceType
     {
         return sprintf('sylius_%s_archetype_translation', $this->subject);
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getBlockPrefix()
+    {
+        return sprintf('sylius_%s_archetype_translation', $this->subject);
+    }
 }

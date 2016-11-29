@@ -73,4 +73,12 @@ class ArchetypeType extends AbstractResourceType
     {
         return sprintf('sylius_%s_archetype', $this->subject);
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getBlockPrefix()
+    {
+        return sprintf('sylius_%s_archetype', $this->subject);
+    }
 }
