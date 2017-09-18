@@ -15,6 +15,7 @@ use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 final class ArchetypeTranslationTypeSpec extends ObjectBehavior
 {
@@ -35,7 +36,7 @@ final class ArchetypeTranslationTypeSpec extends ObjectBehavior
 
     function it_buils_a_form(FormBuilderInterface $builder)
     {
-        $builder->add('name', 'text', Argument::type('array'))->shouldBeCalled();
+        $builder->add('name', TextType::class, Argument::type('array'))->shouldBeCalled();
 
         $this->buildForm($builder, []);
     }
