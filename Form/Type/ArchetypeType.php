@@ -13,6 +13,8 @@ namespace Sylius\Bundle\ArchetypeBundle\Form\Type;
 
 use Sylius\Bundle\ArchetypeBundle\Form\EventListener\ParentArchetypeListener;
 use Sylius\Bundle\ResourceBundle\Form\EventSubscriber\AddCodeFormSubscriber;
+use Sylius\Bundle\ProductBundle\Form\Type\ProductAttributeChoiceType;
+use Sylius\Bundle\ProductBundle\Form\Type\ProductOptionChoiceType;
 use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
 use Symfony\Component\Form\FormBuilderInterface;
 
@@ -53,12 +55,12 @@ class ArchetypeType extends AbstractResourceType
                 'type' => sprintf('sylius_%s_archetype_translation', $this->subject),
                 'label' => 'sylius.form.archetype.name',
             ])
-            ->add('attributes', sprintf('sylius_%s_attribute_choice', $this->subject), [
+            ->add('attributes', ProductAttributeChoiceType::class, [
                 'required' => false,
                 'multiple' => true,
                 'label' => 'sylius.form.archetype.attributes',
             ])
-            ->add('options', sprintf('sylius_%s_option_choice', $this->subject), [
+            ->add('options', ProductOptionChoiceType::class, [
                 'required' => false,
                 'multiple' => true,
                 'label' => 'sylius.form.archetype.options',
